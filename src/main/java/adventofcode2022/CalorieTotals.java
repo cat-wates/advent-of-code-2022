@@ -8,6 +8,7 @@ public class CalorieTotals {
 
     public ArrayList<Integer> caloriesPerElf(ArrayList<Integer> calories) {
         ArrayList<Integer> caloriesPerElf = new ArrayList<>();
+        calories.add(0); //adds 0 onto end of calories ArrayList to
         for (Integer calorie : calories) {
             if (calorie == 0) {
                 caloriesPerElf.add(total);
@@ -17,7 +18,7 @@ public class CalorieTotals {
             }
 
         }
-
+//issue - last value doesn't add to list
 return caloriesPerElf;
     }
 }

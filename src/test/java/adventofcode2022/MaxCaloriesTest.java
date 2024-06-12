@@ -6,19 +6,21 @@ import java.util.ArrayList;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CalorieTotalsTest {
+public class MaxCaloriesTest {
 
     @Test
-    public void shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals() {
+    public void shouldScanArrayAndFindLargestValue() {
 //        Given
         String filePath = "ThreeCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
         CalorieTotals calTot = new CalorieTotals();
         ArrayList<Integer> caloriesPerElf = calTot.caloriesPerElf(listOfCals);
+        MaxCalories maxC = new MaxCalories();
+        int maxCalories = maxC.maxCalories(caloriesPerElf);
+
 //        Then
-        assertEquals(caloriesPerElf.size(), 2);
-        assertEquals(caloriesPerElf.get(0), 2500);
+        assertEquals(maxCalories, 2500);
 
     }
 }
