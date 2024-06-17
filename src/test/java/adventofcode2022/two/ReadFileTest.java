@@ -16,6 +16,6 @@ public class ReadFileTest {
         ArrayList<String> strategyPerRound  = ReadFile.readFile(filePath);
 //        Then
         assertThat(strategyPerRound).hasSize(2);
-        assertThat(strategyPerRound).containsExactly("A X", "A X");
+        assertThat(strategyPerRound).containsExactly("A X", "B Y");
     }
 }
