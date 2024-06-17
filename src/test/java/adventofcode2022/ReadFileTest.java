@@ -2,7 +2,6 @@ package adventofcode2022;
 
 import org.junit.jupiter.api.Test;
 
-import java.io.IOException;
 import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -10,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class ReadFileTest {
 
     @Test
-    public void shouldReadTwoLinesOfInputFile() throws IOException {
+    public void shouldReadTwoLinesOfInputFile() {
 //        Given
         String filePath = "TwoCalorieVals.txt";
 //        When
@@ -21,14 +20,14 @@ public class ReadFileTest {
     }
 
     @Test
-    public void shouldReadFourLinesOfInputFileWithBlankspace() throws IOException {
+    public void shouldReadFourLinesOfInputFileWithBlankspace() {
 //        Given
         String filePath = "ThreeCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
 //        Then
-//        assertEquals(listOfCals.get(2), 0);
-//        assertEquals(listOfCals.size(), 4);
+        assertThat(listOfCals).hasSize(4);
+        assertThat(listOfCals).containsExactly(1000, 1500, 0, 500);
     }
 }
 
