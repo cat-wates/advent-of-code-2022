@@ -1,4 +1,4 @@
-package adventofcode2022;
+package adventofcode2022.one;
 
 import java.util.ArrayList;
 

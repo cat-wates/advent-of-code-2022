@@ -1,4 +1,4 @@
-package adventofcode2022;
+package adventofcode2022.one;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ public class CalorieTotalsTest {
     @Test
     public void shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals() {
 //        Given
-        String filePath = "ThreeCalorieVals.txt";
+        String filePath = "one/ThreeCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
         CalorieTotals calTot = new CalorieTotals();

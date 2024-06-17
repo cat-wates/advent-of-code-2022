@@ -1,4 +1,4 @@
-package adventofcode2022;
+package adventofcode2022.one;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ public class MaxCaloriesTest {
     @Test
     public void shouldScanArrayAndFindLargestValue() {
 //        Given
-        String filePath = "ThreeCalorieVals.txt";
+        String filePath = "one/ThreeCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
         CalorieTotals calTot = new CalorieTotals();
@@ -27,7 +27,7 @@ public class MaxCaloriesTest {
     @Test
     public void shouldScanArrayAndFind3LargestValues() {
 //        Given
-        String filePath = "FourCalorieVals.txt";
+        String filePath = "one/FourCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
         CalorieTotals calTot = new CalorieTotals();
