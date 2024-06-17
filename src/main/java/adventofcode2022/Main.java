@@ -9,7 +9,7 @@ public class Main {
         CalorieTotals calTot = new CalorieTotals();
         ArrayList<Integer> calsPerElf = calTot.caloriesPerElf(calories);
         MaxCalories maxC = new MaxCalories();
-        int maxCalories = maxC.maxCalories(calsPerElf);
-        System.out.println(maxCalories);
+        int maxCalories1 = maxC.max3Calories(calsPerElf);
+        System.out.println(maxCalories1);
     }
 }

@@ -4,14 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="AoC day 1 pt 1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/MaxCalories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/MaxCaloriesTest.java" afterDir="false" />
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Finished day 1 part 1">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/FourCalorieVals.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/CalorieTotals.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/CalorieTotals.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/CalorieTotalsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/CalorieTotalsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/ThreeCalorieVals.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/ThreeCalorieVals.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/MaxCalories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/MaxCalories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/MaxCaloriesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/MaxCaloriesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/ReadFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/ReadFileTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +53,7 @@
   "keyToString": {
     "Gradle.CalorieTotalsTest.should.executor": "Run",
     "Gradle.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals.executor": "Run",
+    "Gradle.MaxCaloriesTest.shouldScanArrayAndFind3LargestValues.executor": "Run",
     "Gradle.MaxCaloriesTest.shouldScanArrayAndFindLargestValue.executor": "Run",
     "Gradle.ReadFileTest.shouldReadFourLinesOfInputFileWithBlankspace.executor": "Run",
     "Gradle.ReadFileTest.shouldReadMultipleTwoLinesOfInputFileAndAddTogether.executor": "Run",
@@ -87,30 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CalorieTotalsTest.should" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.CalorieTotalsTest.should&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
     <configuration name="CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -125,6 +103,30 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;adventofcode2022.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MaxCaloriesTest.shouldScanArrayAndFind3LargestValues" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;adventofcode2022.MaxCaloriesTest.shouldScanArrayAndFind3LargestValues&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -159,7 +161,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ReadFileTest.shouldReadFourLinesOfInputFileWithBlankspace" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ReadFileTest.shouldReadTwoLinesOfInputFile" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -172,7 +174,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventofcode2022.ReadFileTest.shouldReadFourLinesOfInputFileWithBlankspace&quot;" />
+            <option value="&quot;adventofcode2022.ReadFileTest.shouldReadTwoLinesOfInputFile&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -185,11 +187,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.MaxCaloriesTest.shouldScanArrayAndFindLargestValue" />
-        <item itemvalue="Gradle.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals" />
-        <item itemvalue="Gradle.CalorieTotalsTest.should" />
-        <item itemvalue="Gradle.ReadFileTest.shouldReadFourLinesOfInputFileWithBlankspace" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Gradle.MaxCaloriesTest.shouldScanArrayAndFind3LargestValues" />
+        <item itemvalue="Gradle.ReadFileTest.shouldReadTwoLinesOfInputFile" />
+        <item itemvalue="Gradle.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals" />
+        <item itemvalue="Gradle.MaxCaloriesTest.shouldScanArrayAndFindLargestValue" />
       </list>
     </recent_temporary>
   </component>
@@ -208,7 +210,13 @@
       <workItem from="1716479139690" duration="945000" />
       <workItem from="1716480098386" duration="5711000" />
       <workItem from="1716902766643" duration="8795000" />
-      <workItem from="1718198140160" duration="7869000" />
+      <workItem from="1718198140160" duration="12240000" />
+      <workItem from="1718613439948" duration="2970000" />
+      <workItem from="1718618655904" duration="787000" />
+      <workItem from="1718619847012" duration="921000" />
+      <workItem from="1718621204562" duration="9000" />
+      <workItem from="1718622651038" duration="772000" />
+      <workItem from="1718628851574" duration="2081000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -218,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718199912607</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished day 1 part 1">
+      <option name="closed" value="true" />
+      <created>1718207594336</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718207594336</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +253,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AoC day 1 pt 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="AoC day 1 pt 1" />
+    <MESSAGE value="Finished day 1 part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished day 1 part 1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/adventofcode2022/MaxCalories.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
