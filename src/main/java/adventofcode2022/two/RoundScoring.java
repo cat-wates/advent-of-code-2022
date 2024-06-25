@@ -8,32 +8,19 @@ public class RoundScoring {
 
     public int calculateRoundTotals(ArrayList<String> convertedStrategyPerRound) {
         for (String round : convertedStrategyPerRound) {
-            if (round.equals("1 1")) {
-                total += 4;
+            int opponentMove = Character.getNumericValue(round.charAt(0));
+            int myMove = Character.getNumericValue(round.charAt(2));
+            //draws
+            if (opponentMove == myMove) {
+                total = total + 3 + myMove;
             }
-            else if (round.equals("1 2")) {
-                total += 8;
+            //wins
+            else if ((opponentMove == 1 && myMove == 2) || (opponentMove == 2 && myMove == 3) || (opponentMove == 3 && myMove == 1)) {
+                total = total + 6 + myMove;
             }
-            else if (round.equals("1 3")) {
-                total += 3;
-            }
-            else if (round.equals("2 1")) {
-                total += 1;
-            }
-            else if (round.equals("2 2")) {
-                total += 5;
-            }
-            else if (round.equals("2 3")) {
-                total += 9;
-            }
-            else if (round.equals("3 1")) {
-                total += 7;
-            }
-            else if (round.equals("3 2")) {
-                total += 2;
-            }
-            else if (round.equals("3 3")) {
-                total += 6;
+            //loses
+            else if ((opponentMove == 1 && myMove == 3) || (opponentMove == 2 && myMove == 1) || (opponentMove == 3 && myMove == 2)) {
+                total += myMove;
             }
         }
         return total;
