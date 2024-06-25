@@ -13,7 +13,9 @@ public class Main {
         ArrayList<String> convertedStrategyPerRound = cc.convertCharsToInts(strategyPerRound);
         RoundScoring rs = new RoundScoring();
         int total = rs.calculateRoundTotals(convertedStrategyPerRound);
-        System.out.println(total);
+        System.out.println("Part A total: " + total);
+        int enhancedTotal = rs.calculateEnhancedRoundTotals(convertedStrategyPerRound);
+        System.out.println("Part B total: " + enhancedTotal);
         } catch (Exception e) {
             System.err.println(e.getMessage());
             System.err.println(Arrays.toString(e.getStackTrace()));

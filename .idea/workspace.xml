@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 part 1:&#10;- First working pass of project&#10;- Next &gt; try to refactor RoundScoring.java">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 part 1 - FINAL SOLUTION:&#10;- Refactored to make better use of converting the chars to ints in RoundScoring.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/RoundScoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/RoundScoring.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/two/RoundScoringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/two/RoundScoringTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +50,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="GradleRunConfiguration" name="RoundScoringTest" />
+    </enabled-run-configurations>
+  </component>
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
@@ -80,7 +87,17 @@
     "Gradle.ReadFileTest.shouldReadMultipleTwoLinesOfInputFileAndAddTogether.executor": "Run",
     "Gradle.ReadFileTest.shouldReadTwoLinesOfInputFile (1).executor": "Run",
     "Gradle.ReadFileTest.shouldReadTwoLinesOfInputFile.executor": "Run",
+    "Gradle.RoundScoringTest.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForOneAndOne.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForOneAndThree.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForOneAndTwo.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForThreeAndOne.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForThreeAndThree.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForThreeAndTwo.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForTwoAndOne.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnNewScoreTotalForTwoAndTwo.executor": "Run",
     "Gradle.RoundScoringTest.shouldReturnScoreTotal.executor": "Run",
+    "Gradle.RoundScoringTest.shouldReturnScoreTotalForOneAndOne.executor": "Run",
     "Gradle.RoundScoringTest.shouldReturnScoreTotalForOneAndThree.executor": "Run",
     "Gradle.RoundScoringTest.shouldReturnScoreTotalForOneAndTwo.executor": "Run",
     "Gradle.RoundScoringTest.shouldReturnScoreTotalForThreeAndThree.executor": "Run",
@@ -148,7 +165,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RoundScoringTest.shouldReturnScoreTotalForOneAndOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RoundScoringTest.shouldReturnNewScoreTotalForOneAndOne" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,7 +178,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnScoreTotalForOneAndOne&quot;" />
+            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnNewScoreTotalForOneAndOne&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,7 +189,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RoundScoringTest.shouldReturnScoreTotalForThreeAndThree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RoundScoringTest.shouldReturnNewScoreTotalForOneAndThree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -185,7 +202,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnScoreTotalForThreeAndThree&quot;" />
+            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnNewScoreTotalForOneAndThree&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -196,7 +213,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="RoundScoringTest.shouldReturnScoreTotalForTwoAndThree" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RoundScoringTest.shouldReturnNewScoreTotalForTwoAndTwo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -209,7 +226,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnScoreTotalForTwoAndThree&quot;" />
+            <option value="&quot;adventofcode2022.two.RoundScoringTest.shouldReturnNewScoreTotalForTwoAndTwo&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,9 +241,9 @@
       <list>
         <item itemvalue="Application.Main" />
         <item itemvalue="Gradle.RoundScoringTest" />
-        <item itemvalue="Gradle.RoundScoringTest.shouldReturnScoreTotalForOneAndOne" />
-        <item itemvalue="Gradle.RoundScoringTest.shouldReturnScoreTotalForThreeAndThree" />
-        <item itemvalue="Gradle.RoundScoringTest.shouldReturnScoreTotalForTwoAndThree" />
+        <item itemvalue="Gradle.RoundScoringTest.shouldReturnNewScoreTotalForOneAndOne" />
+        <item itemvalue="Gradle.RoundScoringTest.shouldReturnNewScoreTotalForOneAndThree" />
+        <item itemvalue="Gradle.RoundScoringTest.shouldReturnNewScoreTotalForTwoAndTwo" />
       </list>
     </recent_temporary>
   </component>
@@ -252,7 +269,7 @@
       <workItem from="1718621204562" duration="9000" />
       <workItem from="1718622651038" duration="772000" />
       <workItem from="1718628851574" duration="9794000" />
-      <workItem from="1718640300769" duration="16198000" />
+      <workItem from="1718640300769" duration="22425000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -310,7 +327,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718653468184</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Day 2 part 1 - FINAL SOLUTION:&#10;- Refactored to make better use of converting the chars to ints in RoundScoring.java">
+      <option name="closed" value="true" />
+      <created>1719322755672</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719322755672</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -334,6 +359,7 @@
     <MESSAGE value="Reorg of packages" />
     <MESSAGE value="Day 2 part 1:&#10;- Have read in file and created test for converting chars to ints&#10;- Create more tests for each case, e.g. X, Y, Z each have a test&#10;- Update main and print out new arraylist&#10;- Create new class to define winning, losing and drawing" />
     <MESSAGE value="Day 2 part 1:&#10;- First working pass of project&#10;- Next &gt; try to refactor RoundScoring.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 2 part 1:&#10;- First working pass of project&#10;- Next &gt; try to refactor RoundScoring.java" />
+    <MESSAGE value="Day 2 part 1 - FINAL SOLUTION:&#10;- Refactored to make better use of converting the chars to ints in RoundScoring.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 part 1 - FINAL SOLUTION:&#10;- Refactored to make better use of converting the chars to ints in RoundScoring.java" />
   </component>
 </project>
