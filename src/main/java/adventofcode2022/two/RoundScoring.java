@@ -4,9 +4,15 @@ import java.util.ArrayList;
 
 public class RoundScoring {
 
-    int total = 0;
+    final int ROCK = 1;
+    final int PAPER = 2;
+    final int SCISSORS = 3;
+    final int LOSE = 1;
+    final int DRAW = 2;
+    final int WIN = 3;
 
     public int calculateRoundTotals(ArrayList<String> convertedStrategyPerRound) {
+        int total = 0;
         for (String round : convertedStrategyPerRound) {
             int opponentMove = Character.getNumericValue(round.charAt(0));
             int myMove = Character.getNumericValue(round.charAt(2));
@@ -15,11 +21,11 @@ public class RoundScoring {
                 total = total + 3 + myMove;
             }
             //wins
-            else if ((opponentMove == 1 && myMove == 2) || (opponentMove == 2 && myMove == 3) || (opponentMove == 3 && myMove == 1)) {
+            else if ((opponentMove == ROCK && myMove == PAPER) || (opponentMove == PAPER && myMove == SCISSORS) || (opponentMove == SCISSORS && myMove == ROCK)) {
                 total = total + 6 + myMove;
             }
             //loses
-            else if ((opponentMove == 1 && myMove == 3) || (opponentMove == 2 && myMove == 1) || (opponentMove == 3 && myMove == 2)) {
+            else if ((opponentMove == ROCK && myMove == SCISSORS) || (opponentMove == PAPER && myMove == ROCK) || (opponentMove == SCISSORS && myMove == PAPER)) {
                 total += myMove;
             }
         }
@@ -28,41 +34,42 @@ public class RoundScoring {
     }
 
     public int calculateEnhancedRoundTotals(ArrayList<String> convertedStrategyPerRound) {
+        int total = 0;
         for (String round : convertedStrategyPerRound) {
             int opponentMove = Character.getNumericValue(round.charAt(0));
             int desiredOutcome = Character.getNumericValue(round.charAt(2));
             int myMove = 0;
             //draws
-            if (desiredOutcome == 2) {
+            if (desiredOutcome == DRAW) {
                 myMove = opponentMove;
                 total = total + 3 + myMove;
             }
-            else if (desiredOutcome == 1) {
+            else if (desiredOutcome == LOSE) {
                 switch (opponentMove) {
-                    case 1:
-                        myMove = 3;
+                    case ROCK:
+                        myMove = SCISSORS;
                         break;
-                    case 2:
-                        myMove = 1;
+                    case PAPER:
+                        myMove = ROCK;
                         break;
-                    case 3:
-                        myMove = 2;
+                    case SCISSORS:
+                        myMove = PAPER;
                         break;
                     default:
                         System.out.println("Error");
                 }
                 total += myMove;
             }
-            else if (desiredOutcome == 3) {
+            else if (desiredOutcome == WIN) {
                 switch (opponentMove) {
-                    case 1:
-                        myMove = 2;
+                    case ROCK:
+                        myMove = PAPER;
                         break;
-                    case 2:
-                        myMove = 3;
+                    case PAPER:
+                        myMove = SCISSORS;
                         break;
-                    case 3:
-                        myMove = 1;
+                    case SCISSORS:
+                        myMove = ROCK;
                         break;
                     default:
                         System.out.println("Error");

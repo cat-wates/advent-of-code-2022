@@ -119,7 +119,7 @@ public class RoundScoringTest {
 
     //part B
     @Test
-    public void shouldReturnNewScoreTotalForOneAndOne() {
+    public void shouldReturnScoreOf3WhenOpponentIsRockAndOutcomeIsLose() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("1 1");
@@ -131,7 +131,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForOneAndTwo() {
+    public void shouldReturnScoreOf4WhenOpponentIsRockAndOutcomeIsDraw() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("1 2");
@@ -143,7 +143,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForOneAndThree() {
+    public void shouldReturnScoreOf8WhenOpponentIsRockAndOutcomeIsWin() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("1 3");
@@ -155,7 +155,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForTwoAndOne() {
+    public void shouldReturnScoreOf1WhenOpponentIsPaperAndOutcomeIsLose() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("2 1");
@@ -167,7 +167,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForTwoAndTwo() {
+    public void shouldReturnScoreOf5WhenOpponentIsPaperAndOutcomeIsDraw() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("2 2");
@@ -179,7 +179,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForTwoAndThree() {
+    public void shouldReturnScoreOf9WhenOpponentIsPaperAndOutcomeIsWin() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("2 3");
@@ -191,7 +191,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForThreeAndOne() {
+    public void shouldReturnScoreOf2WhenOpponentIsScissorsAndOutcomeIsLose() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("3 1");
@@ -203,7 +203,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForThreeAndTwo() {
+    public void shouldReturnScoreOf6WhenOpponentIsScissorsAndOutcomeIsDraw() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("3 2");
@@ -215,7 +215,7 @@ public class RoundScoringTest {
     }
 
     @Test
-    public void shouldReturnNewScoreTotalForThreeAndThree() {
+    public void shouldReturnScoreOf7WhenOpponentIsScissorsAndOutcomeIsWin() {
 //        Given
         ArrayList<String> strategyPerRound = new ArrayList<>();
         strategyPerRound.add("3 3");
