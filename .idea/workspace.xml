@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 part 2&#10;- Created new method in RoundScoring.java to account for new strategy information&#10;- Not getting desired output (think it may be an error I've made with calculating the totals)&#10;- Next &gt; troubleshoot issue">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/RoundScoring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/two/RoundScoring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/two/RoundScoringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/two/RoundScoringTest.java" afterDir="false" />
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 part 2 FINAL SOLUTION&#10;- Refactored to ease readability &#10;- Moved the 'total' variable in RoundScoring.java from global to local so that the value resets with every method">
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/three/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,13 +124,13 @@
       <recent name="$PROJECT_DIR$/src/main/resources/one" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.RoundScoringTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.two.Main" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day2.Main" />
       <module name="advent-of-code-2022.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adventofcode2022.two.*" />
+          <option name="PATTERN" value="adventofcode2022.day2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -271,7 +269,7 @@
       <workItem from="1718640300769" duration="25024000" />
       <workItem from="1719576212096" duration="954000" />
       <workItem from="1719912420184" duration="3735000" />
-      <workItem from="1719920645444" duration="1025000" />
+      <workItem from="1719920645444" duration="1415000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -345,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719329893433</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Day 2 part 2 FINAL SOLUTION&#10;- Refactored to ease readability &#10;- Moved the 'total' variable in RoundScoring.java from global to local so that the value resets with every method">
+      <option name="closed" value="true" />
+      <created>1719921699213</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719921699213</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -371,6 +377,7 @@
     <MESSAGE value="Day 2 part 1:&#10;- First working pass of project&#10;- Next &gt; try to refactor RoundScoring.java" />
     <MESSAGE value="Day 2 part 1 - FINAL SOLUTION:&#10;- Refactored to make better use of converting the chars to ints in RoundScoring.java" />
     <MESSAGE value="Day 2 part 2&#10;- Created new method in RoundScoring.java to account for new strategy information&#10;- Not getting desired output (think it may be an error I've made with calculating the totals)&#10;- Next &gt; troubleshoot issue" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 2 part 2&#10;- Created new method in RoundScoring.java to account for new strategy information&#10;- Not getting desired output (think it may be an error I've made with calculating the totals)&#10;- Next &gt; troubleshoot issue" />
+    <MESSAGE value="Day 2 part 2 FINAL SOLUTION&#10;- Refactored to ease readability &#10;- Moved the 'total' variable in RoundScoring.java from global to local so that the value resets with every method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 part 2 FINAL SOLUTION&#10;- Refactored to ease readability &#10;- Moved the 'total' variable in RoundScoring.java from global to local so that the value resets with every method" />
   </component>
 </project>

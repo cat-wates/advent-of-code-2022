@@ -1,4 +1,4 @@
-package adventofcode2022.two;
+package adventofcode2022.day2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ public class Main {
 
     public static void main(String[] args) {
         try {
-        String filePath = "two/StrategyGuide.txt";
+        String filePath = "day2/StrategyGuide.txt";
         ArrayList<String> strategyPerRound = ReadFile.readFile(filePath);
         ConvertChars cc = new ConvertChars();
         ArrayList<String> convertedStrategyPerRound = cc.convertCharsToInts(strategyPerRound);

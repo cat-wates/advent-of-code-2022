@@ -1,4 +1,4 @@
-package adventofcode2022.one;
+package adventofcode2022.day1;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ public class ReadFileTest {
     @Test
     public void shouldReadTwoLinesOfInputFile() {
 //        Given
-        String filePath = "one/TwoCalorieVals.txt";
+        String filePath = "day1/TwoCalorieVals.txt";
 //        When
         ArrayList<Integer> caloriesForElf1  = ReadFile.readFile(filePath);
 //        Then
@@ -22,7 +22,7 @@ public class ReadFileTest {
     @Test
     public void shouldReadFourLinesOfInputFileWithBlankspace() {
 //        Given
-        String filePath = "one/ThreeCalorieVals.txt";
+        String filePath = "day1/ThreeCalorieVals.txt";
 //        When
         ArrayList<Integer> listOfCals = ReadFile.readFile(filePath);
 //        Then

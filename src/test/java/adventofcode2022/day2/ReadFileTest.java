@@ -1,4 +1,4 @@
-package adventofcode2022.two;
+package adventofcode2022.day2;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ public class ReadFileTest {
     @Test
     public void shouldReadTwoLinesOfInputFile() {
 //        Given
-        String filePath = "two/TwoRoundCombos.txt";
+        String filePath = "day2/TwoRoundCombos.txt";
 //        When
         ArrayList<String> strategyPerRound  = ReadFile.readFile(filePath);
 //        Then
