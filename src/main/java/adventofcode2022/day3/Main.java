@@ -17,7 +17,7 @@ public class Main {
                 commonItems.add(cif.compareCompartments(rucksackInstance.compartmentOne, rucksackInstance.compartmentTwo));
             }
             PriorityFinder pf = new PriorityFinder(commonItems);
-            ArrayList<String> priorityList = pf.replaceCharWithInt(commonItems);
+            ArrayList<Integer> priorityList = pf.replaceCharWithInt(commonItems);
             Calculator calc = new Calculator(priorityList);
             System.out.println(calc.calculateTotal(priorityList));
         } catch (Exception e) {

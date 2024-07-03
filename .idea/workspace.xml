@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part A&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +279,7 @@
       <workItem from="1719576212096" duration="954000" />
       <workItem from="1719912420184" duration="3735000" />
       <workItem from="1719920645444" duration="10266000" />
-      <workItem from="1719932309838" duration="12817000" />
+      <workItem from="1719932309838" duration="16380000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -375,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720003709271</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace">
+      <option name="closed" value="true" />
+      <created>1720004856315</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720004856315</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,6 +413,7 @@
     <MESSAGE value="Day 2 part 2 FINAL SOLUTION&#10;- Refactored to ease readability &#10;- Moved the 'total' variable in RoundScoring.java from global to local so that the value resets with every method" />
     <MESSAGE value="Reorg of packages" />
     <MESSAGE value="Day 3 part A&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part A&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
+    <MESSAGE value="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
   </component>
 </project>
