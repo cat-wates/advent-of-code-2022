@@ -11,9 +11,9 @@ public class CalculatorTest {
     @Test
     public void shouldTakeListOfStringNumbersAndCalculateSum() {
 //        Given
-        ArrayList<String> priorityTest = new ArrayList<>();
-        priorityTest.add("1");
-        priorityTest.add("52");
+        ArrayList<Integer> priorityTest = new ArrayList<>();
+        priorityTest.add(1);
+        priorityTest.add(52);
 //        When
         Calculator calc = new Calculator(priorityTest);
         int total = calc.calculateTotal(priorityTest);

@@ -15,10 +15,10 @@ public class PriorityFinderTest {
         testChars.add('a');
 //        When
         PriorityFinder pf = new PriorityFinder(testChars);
-        ArrayList<String> priorityList = pf.replaceCharWithInt(testChars);
+        ArrayList<Integer> priorityList = pf.replaceCharWithInt(testChars);
         System.out.println(priorityList);
 //        Then
-        assertThat(priorityList).contains("1");
+        assertThat(priorityList).contains(1);
     }
 
     @Test
@@ -28,9 +28,9 @@ public class PriorityFinderTest {
         testChars.add('Z');
 //        When
         PriorityFinder pf = new PriorityFinder(testChars);
-        ArrayList<String> priorityList = pf.replaceCharWithInt(testChars);
+        ArrayList<Integer> priorityList = pf.replaceCharWithInt(testChars);
         System.out.println(priorityList);
 //        Then
-        assertThat(priorityList).contains("52");
+        assertThat(priorityList).contains(52);
     }
 }
