@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part 1&#10;- Updating tests">
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day3/BadgeFinderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/day3/SixElves.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/day3/ThreeElves.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/CommonItemFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/CommonItemFinder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Rucksack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Rucksack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +76,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings.executor": "Debug",
+    "Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings.executor": "Debug",
     "Gradle.CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum.executor": "Run",
     "Gradle.CalorieTotalsTest.should.executor": "Run",
     "Gradle.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals.executor": "Run",
@@ -85,6 +92,7 @@
     "Gradle.ConvertCharsTest.shouldConvertZToThree.executor": "Run",
     "Gradle.MaxCaloriesTest.shouldScanArrayAndFind3LargestValues.executor": "Run",
     "Gradle.MaxCaloriesTest.shouldScanArrayAndFindLargestValue.executor": "Run",
+    "Gradle.PriorityFinderTest.executor": "Run",
     "Gradle.PriorityFinderTest.shouldTakeAListContainingTheFirstCharAndConvertTo1.executor": "Run",
     "Gradle.PriorityFinderTest.shouldTakeAListContainingTheLastCharAndConvertTo52.executor": "Run",
     "Gradle.PriorityFinderTest.shouldTakeAListOfLowercaseCharsAndConvertToMappedNumbers.executor": "Run",
@@ -133,7 +141,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/one" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum">
+  <component name="RunManager" selected="Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode2022.day3.Main" />
       <module name="advent-of-code-2022.main" />
@@ -146,6 +154,54 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="BadgeFinderTest.shouldFindCommonCharInThreeStrings" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;adventofcode2022.day3.BadgeFinderTest.shouldFindCommonCharInThreeStrings&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;adventofcode2022.day3.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -171,7 +227,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PriorityFinderTest.shouldTakeAListContainingTheFirstCharAndConvertTo1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PriorityFinderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -184,55 +240,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;adventofcode2022.day3.PriorityFinderTest.shouldTakeAListContainingTheFirstCharAndConvertTo1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PriorityFinderTest.shouldTakeAListContainingTheLastCharAndConvertTo52" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.day3.PriorityFinderTest.shouldTakeAListContainingTheLastCharAndConvertTo52&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PriorityFinderTest.shouldTakeAListOfLowercaseCharsAndConvertToMappedNumbers" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.day3.PriorityFinderTest.shouldTakeAListOfLowercaseCharsAndConvertToMappedNumbers&quot;" />
+            <option value="&quot;adventofcode2022.day3.PriorityFinderTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -245,11 +253,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings" />
+        <item itemvalue="Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings" />
+        <item itemvalue="Gradle.PriorityFinderTest" />
         <item itemvalue="Gradle.CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.PriorityFinderTest.shouldTakeAListContainingTheLastCharAndConvertTo52" />
-        <item itemvalue="Gradle.PriorityFinderTest.shouldTakeAListContainingTheFirstCharAndConvertTo1" />
-        <item itemvalue="Gradle.PriorityFinderTest.shouldTakeAListOfLowercaseCharsAndConvertToMappedNumbers" />
       </list>
     </recent_temporary>
   </component>
@@ -279,7 +287,7 @@
       <workItem from="1719576212096" duration="954000" />
       <workItem from="1719912420184" duration="3735000" />
       <workItem from="1719920645444" duration="10266000" />
-      <workItem from="1719932309838" duration="16380000" />
+      <workItem from="1719932309838" duration="30531000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -385,7 +393,23 @@
       <option name="project" value="LOCAL" />
       <updated>1720004856315</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Day 3 part 1&#10;- Refactored PriorityFinder.java to utilise ASCII values against alphabetical characters">
+      <option name="closed" value="true" />
+      <created>1720020126997</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720020126997</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Day 3 part 1&#10;- Updating tests">
+      <option name="closed" value="true" />
+      <created>1720020157090</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720020157090</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -414,6 +438,19 @@
     <MESSAGE value="Reorg of packages" />
     <MESSAGE value="Day 3 part A&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
     <MESSAGE value="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
+    <MESSAGE value="Day 3 part 1&#10;- Refactored PriorityFinder.java to utilise ASCII values against alphabetical characters" />
+    <MESSAGE value="Day 3 part 1&#10;- Updating tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 1&#10;- Updating tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

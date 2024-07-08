@@ -20,7 +20,6 @@ public class CommonItemFinder {
         }
         //if common item is not null (think of solution)
         return commonItem;
-
     }
 
 

@@ -15,10 +15,4 @@ public class Rucksack {
             compartmentOne = rucksack.substring(0, size/2);
             compartmentTwo = rucksack.substring(size/2);
     }
-
-//    @Override
-//    public String toString() {
-//        return
-//
-//    }
 }
