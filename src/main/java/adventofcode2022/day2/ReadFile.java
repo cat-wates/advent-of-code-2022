@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class ReadFile {
 
     public static ArrayList<String> readFile(String filePath) { //input file into method
-        ArrayList<String> strategyPerRound = new ArrayList<>(); //create String ArrayList called caloriesPerElf
+        ArrayList<String> list = new ArrayList<>(); //create String ArrayList called caloriesPerElf
         InputStream is = ClassLoader.getSystemResourceAsStream(filePath); //reads file as InputStream
         Scanner scanner = new Scanner(is); //scans through IS
         while (scanner.hasNext()) {
             String next = scanner.nextLine();
-            strategyPerRound.add(next);
+            list.add(next);
         }
         scanner.close();
-        return strategyPerRound;
+        return list;
     }
 
 }
