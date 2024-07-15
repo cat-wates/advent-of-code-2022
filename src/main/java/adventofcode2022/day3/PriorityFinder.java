@@ -12,8 +12,8 @@ public class PriorityFinder {
 
     public ArrayList<Integer> replaceCharWithInt(ArrayList<Character> commonItems) {
         ArrayList<Integer> priorityList = new ArrayList<>();
-        int conversion = 0;
         for (char item : commonItems) {
+            int conversion = 0;
             for (char alphabet = 'a'; alphabet <= 'z'; alphabet ++) {
                 if (item == alphabet) {
                     conversion = (int) item - 96; //chars a to z are 97-122 in ASCII

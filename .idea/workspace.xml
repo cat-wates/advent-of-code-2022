@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part 1&#10;- Updating tests">
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day3/BadgeFinderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/day3/SixElves.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/day3/ThreeElves.txt" afterDir="false" />
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 3 part 2&#10;- New class for part 2 - BadgeFinder.java looks at 3 strings at a time and searches them to find the common item&#10;- Tests running and output produced but not correct according to AoC&#10;- Next &gt; revisit logic in BadgeFinder.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/CommonItemFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/CommonItemFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Rucksack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Rucksack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/PriorityFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/day3/ThreeElves.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/day3/ThreeElves.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +72,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings.executor": "Debug",
-    "Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings.executor": "Debug",
+    "Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings.executor": "Run",
+    "Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings.executor": "Run",
     "Gradle.CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum.executor": "Run",
     "Gradle.CalorieTotalsTest.should.executor": "Run",
     "Gradle.CalorieTotalsTest.shouldTakeAnArrayOfCalsAndReturnAnArrayWithCalTotals.executor": "Run",
@@ -141,7 +137,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/one" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode2022.day3.Main" />
       <module name="advent-of-code-2022.main" />
@@ -253,8 +249,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings" />
         <item itemvalue="Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings" />
+        <item itemvalue="Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings" />
         <item itemvalue="Gradle.PriorityFinderTest" />
         <item itemvalue="Gradle.CalculatorTest.shouldTakeListOfStringNumbersAndCalculateSum" />
         <item itemvalue="Application.Main" />
@@ -287,7 +283,7 @@
       <workItem from="1719576212096" duration="954000" />
       <workItem from="1719912420184" duration="3735000" />
       <workItem from="1719920645444" duration="10266000" />
-      <workItem from="1719932309838" duration="30531000" />
+      <workItem from="1719932309838" duration="37612000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -409,7 +405,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720020157090</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Day 3 part 2&#10;- New class for part 2 - BadgeFinder.java looks at 3 strings at a time and searches them to find the common item&#10;- Tests running and output produced but not correct according to AoC&#10;- Next &gt; revisit logic in BadgeFinder.java">
+      <option name="closed" value="true" />
+      <created>1720455764547</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720455764547</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,17 +444,7 @@
     <MESSAGE value="Day 3 part 1&#10;- First pass of working code&#10;- Next &gt; refactor PriorityFinder.java to use an incremental loop instead of .replace" />
     <MESSAGE value="Day 3 part 1&#10;- Refactored PriorityFinder.java to utilise ASCII values against alphabetical characters" />
     <MESSAGE value="Day 3 part 1&#10;- Updating tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 1&#10;- Updating tests" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/adventofcode2022/day3/BadgeFinder.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Day 3 part 2&#10;- New class for part 2 - BadgeFinder.java looks at 3 strings at a time and searches them to find the common item&#10;- Tests running and output produced but not correct according to AoC&#10;- Next &gt; revisit logic in BadgeFinder.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 3 part 2&#10;- New class for part 2 - BadgeFinder.java looks at 3 strings at a time and searches them to find the common item&#10;- Tests running and output produced but not correct according to AoC&#10;- Next &gt; revisit logic in BadgeFinder.java" />
   </component>
 </project>
