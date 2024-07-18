@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 4 part 1&#10;- Working solution for part 1&#10;- Next &gt; try refactoring some of the logic outside of Main.java(?)">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Clean-up of repo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/ElfPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/ElfPair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/day4/ElfPairTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day4/ElfPairTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +67,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "Application.adventofcode2022.day3.Main.executor": "Run",
     "Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings.executor": "Run",
     "Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings.executor": "Run",
@@ -114,6 +115,10 @@
     "Gradle.RoundScoringTest.shouldReturnScoreTotalForTwoAndTwo.executor": "Run",
     "Gradle.RucksackTest.shouldSplitRucksackInstanceIntoTwoCompartments.executor": "Run",
     "Gradle.advent-of-code-2022 [:Main.main()].executor": "Run",
+    "JUnit.ElfPairTest.executor": "Run",
+    "JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue.executor": "Run",
+    "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
+    "JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -150,98 +155,76 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="adventofcode2022.day3.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day3.Main" />
-      <module name="advent-of-code-2022.main" />
+    <configuration name="ElfPairTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adventofcode2022.day3.*" />
+          <option name="PATTERN" value="adventofcode2022.day4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldCheckWhether" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.day4.ElfPairTest.shouldCheckWhether&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
+      <option name="METHOD_NAME" value="shouldCheckWhetherAnyDuplicateWillResultInTrue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldSplitAStringIntoTwoElementsOfAStringArray" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.day4.ElfPairTest.shouldSplitAStringIntoTwoElementsOfAStringArray&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
+      <option name="METHOD_NAME" value="shouldCheckWhetherNoCompleteDuplicateResultsInFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldSplitAStringIntoTwoSubstrings" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;adventofcode2022.day4.ElfPairTest.shouldSplitAStringIntoTwoSubstrings&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
+      <option name="METHOD_NAME" value="shouldCheckWhetherNoDuplicatesWillResultInFalse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
-        <item itemvalue="Application.adventofcode2022.day3.Main" />
-        <item itemvalue="Gradle.ElfPairTest.shouldCheckWhether" />
-        <item itemvalue="Gradle.ElfPairTest.shouldSplitAStringIntoTwoElementsOfAStringArray" />
-        <item itemvalue="Gradle.ElfPairTest.shouldSplitAStringIntoTwoSubstrings" />
+        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue" />
+        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse" />
+        <item itemvalue="JUnit.ElfPairTest" />
+        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse" />
       </list>
     </recent_temporary>
   </component>
@@ -273,7 +256,7 @@
       <workItem from="1719920645444" duration="10266000" />
       <workItem from="1719932309838" duration="40532000" />
       <workItem from="1721048255707" duration="10457000" />
-      <workItem from="1721219067217" duration="3920000" />
+      <workItem from="1721219067217" duration="9203000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -419,7 +402,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721058468695</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Clean-up of repo">
+      <option name="closed" value="true" />
+      <created>1721297895035</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1721297895035</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -453,6 +444,7 @@
     <MESSAGE value="Day 3 part 2&#10;- New class for part 2 - BadgeFinder.java looks at 3 strings at a time and searches them to find the common item&#10;- Tests running and output produced but not correct according to AoC&#10;- Next &gt; revisit logic in BadgeFinder.java" />
     <MESSAGE value="Day 3 part 2 FINAL&#10;- Refactored BadgeFinder.java to use a simpler loop structure" />
     <MESSAGE value="Day 4 part 1&#10;- Working solution for part 1&#10;- Next &gt; try refactoring some of the logic outside of Main.java(?)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 4 part 1&#10;- Working solution for part 1&#10;- Next &gt; try refactoring some of the logic outside of Main.java(?)" />
+    <MESSAGE value="Clean-up of repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Clean-up of repo" />
   </component>
 </project>

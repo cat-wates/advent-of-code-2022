@@ -30,15 +30,55 @@ public class ElfPairTest {
     }
 
     @Test
-    public void shouldCheckWhether() {
+    public void shouldCheckWhetherACompleteDuplicateResultsInTrue() {
 //        Given
         String elfPair = "61-78,61-77";
 //        When
         ElfPair ep = new ElfPair(elfPair);
         String[] elfOneBounds = ep.splitIntoBounds(ep.elfOne);
         String[] elfTwoBounds = ep.splitIntoBounds(ep.elfTwo);
-        boolean isEncapsulatedDuplicate = ep.duplicateChecker(elfOneBounds, elfTwoBounds);
+        boolean isEncapsulatedDuplicate = ep.completeDuplicateChecker(elfOneBounds, elfTwoBounds);
 //        Then
         assertThat(isEncapsulatedDuplicate).isEqualTo(true);
     }
+
+    @Test
+    public void shouldCheckWhetherNoCompleteDuplicateResultsInFalse() {
+//        Given
+        String elfPair = "61-62,63-77";
+//        When
+        ElfPair ep = new ElfPair(elfPair);
+        String[] elfOneBounds = ep.splitIntoBounds(ep.elfOne);
+        String[] elfTwoBounds = ep.splitIntoBounds(ep.elfTwo);
+        boolean isEncapsulatedDuplicate = ep.completeDuplicateChecker(elfOneBounds, elfTwoBounds);
+//        Then
+        assertThat(isEncapsulatedDuplicate).isEqualTo(false);
+    }
+
+    @Test
+    public void shouldCheckWhetherAnyDuplicateWillResultInTrue() {
+//        Given
+        String elfPair = "61-78,61-77";
+//        When
+        ElfPair ep = new ElfPair(elfPair);
+        String[] elfOneBounds = ep.splitIntoBounds(ep.elfOne);
+        String[] elfTwoBounds = ep.splitIntoBounds(ep.elfTwo);
+        boolean isAnyDuplicate = ep.anyDuplicateChecker(elfOneBounds, elfTwoBounds);
+//        Then
+        assertThat(isAnyDuplicate).isEqualTo(true);
+    }
+
+    @Test
+    public void shouldCheckWhetherNoDuplicatesWillResultInFalse() {
+//        Given
+        String elfPair = "61-62,63-77";
+//        When
+        ElfPair ep = new ElfPair(elfPair);
+        String[] elfOneBounds = ep.splitIntoBounds(ep.elfOne);
+        String[] elfTwoBounds = ep.splitIntoBounds(ep.elfTwo);
+        boolean isAnyDuplicate = ep.anyDuplicateChecker(elfOneBounds, elfTwoBounds);
+//        Then
+        assertThat(isAnyDuplicate).isEqualTo(false);
+    }
 }
+
