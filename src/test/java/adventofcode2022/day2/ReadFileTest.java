@@ -13,7 +13,7 @@ public class ReadFileTest {
 //        Given
         String filePath = "day2/TwoRoundCombos.txt";
 //        When
-        ArrayList<String> strategyPerRound  = ReadFile.readFile(filePath);
+        ArrayList<String> strategyPerRound = ReadFile.readFile(filePath);
 //        Then
         assertThat(strategyPerRound).hasSize(2);
         assertThat(strategyPerRound).containsExactly("A X", "B Y");

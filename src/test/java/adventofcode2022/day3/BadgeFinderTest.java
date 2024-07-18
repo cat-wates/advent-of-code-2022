@@ -12,7 +12,7 @@ public class BadgeFinderTest {
     public void shouldFindCommonCharInThreeStrings() {
 //        Given
         String filePath = "day3/ThreeElves.txt";
-        ArrayList<String> rucksacks = ReadFile.readFile(filePath);
+        ArrayList<String> rucksacks = adventofcode2022.day2.ReadFile.readFile(filePath);
 //        When
         BadgeFinder bf = new BadgeFinder(rucksacks);
         ArrayList<Character> badges = bf.findBadge(rucksacks);
@@ -24,7 +24,7 @@ public class BadgeFinderTest {
     public void shouldFindTwoCommonCharsInSixStrings() {
 //        Given
         String filePath = "day3/SixElves.txt";
-        ArrayList<String> rucksacks = ReadFile.readFile(filePath);
+        ArrayList<String> rucksacks = adventofcode2022.day2.ReadFile.readFile(filePath);
 //        When
         BadgeFinder bf = new BadgeFinder(rucksacks);
         ArrayList<Character> badges = bf.findBadge(rucksacks);

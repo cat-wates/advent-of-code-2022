@@ -11,8 +11,8 @@ public class Rucksack {
     }
 
     public void splitRucksackIntoCompartments(String rucksack) {
-            int size = rucksack.length();
-            compartmentOne = rucksack.substring(0, size/2);
-            compartmentTwo = rucksack.substring(size/2);
+        int size = rucksack.length();
+        compartmentOne = rucksack.substring(0, size / 2);
+        compartmentTwo = rucksack.substring(size / 2);
     }
 }

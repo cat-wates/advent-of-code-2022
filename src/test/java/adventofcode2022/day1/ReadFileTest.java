@@ -13,7 +13,7 @@ public class ReadFileTest {
 //        Given
         String filePath = "day1/TwoCalorieVals.txt";
 //        When
-        ArrayList<Integer> caloriesForElf1  = ReadFile.readFile(filePath);
+        ArrayList<Integer> caloriesForElf1 = ReadFile.readFile(filePath);
 //        Then
         assertThat(caloriesForElf1).hasSize(2);
         assertThat(caloriesForElf1).containsExactly(7844, 1892);

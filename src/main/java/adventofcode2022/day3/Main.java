@@ -9,7 +9,7 @@ public class Main {
 //    public static void main(String[] args) {
 //        try {
 //            String filePath = "day3/Rucksacks.txt";
-//            ArrayList<String> rucksacks = ReadFile.readFile(filePath);
+//            ArrayList<String> rucksacks = adventofcode2022.day2.ReadFile.readFile(filePath);
 //            ArrayList<Character> commonItems = new ArrayList<>();
 //            for (String rucksack : rucksacks) {
 //                Rucksack rucksackInstance = new Rucksack(rucksack);
@@ -29,19 +29,19 @@ public class Main {
 
 // part B
 
-public static void main(String[] args) {
-    try {
-        String filePath = "day3/Rucksacks.txt";
-        ArrayList<String> rucksacks = ReadFile.readFile(filePath);
-        BadgeFinder bf = new BadgeFinder(rucksacks);
-        ArrayList<Character> badges = bf.findBadge(rucksacks);
-        PriorityFinder pf = new PriorityFinder(badges);
-        ArrayList<Integer> priorityList = pf.replaceCharWithInt(badges);
-        Calculator calc = new Calculator(priorityList);
-        System.out.println(calc.calculateTotal(priorityList));
-    } catch (Exception e) {
+    public static void main(String[] args) {
+        try {
+            String filePath = "day3/Rucksacks.txt";
+            ArrayList<String> rucksacks = adventofcode2022.day2.ReadFile.readFile(filePath);
+            BadgeFinder bf = new BadgeFinder(rucksacks);
+            ArrayList<Character> badges = bf.findBadge(rucksacks);
+            PriorityFinder pf = new PriorityFinder(badges);
+            ArrayList<Integer> priorityList = pf.replaceCharWithInt(badges);
+            Calculator calc = new Calculator(priorityList);
+            System.out.println(calc.calculateTotal(priorityList));
+        } catch (Exception e) {
             System.err.println(e.getMessage());
             System.err.println(Arrays.toString(e.getStackTrace()));
         }
-}
+    }
 }

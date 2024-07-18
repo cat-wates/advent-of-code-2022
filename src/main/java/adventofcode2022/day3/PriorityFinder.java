@@ -14,13 +14,13 @@ public class PriorityFinder {
         ArrayList<Integer> priorityList = new ArrayList<>();
         for (char item : commonItems) {
             int conversion = 0;
-            for (char alphabet = 'a'; alphabet <= 'z'; alphabet ++) {
+            for (char alphabet = 'a'; alphabet <= 'z'; alphabet++) {
                 if (item == alphabet) {
                     conversion = (int) item - 96; //chars a to z are 97-122 in ASCII
                     break;
                 }
             }
-            for (char alphabet = 'A'; alphabet <= 'Z'; alphabet ++) {
+            for (char alphabet = 'A'; alphabet <= 'Z'; alphabet++) {
                 if (item == alphabet) {
                     conversion = (int) item - 38; //chars A to Z are 65-90 in ASCII
                     break;

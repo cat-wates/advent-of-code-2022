@@ -43,8 +43,7 @@ public class RoundScoring {
             if (desiredOutcome == DRAW) {
                 myMove = opponentMove;
                 total = total + 3 + myMove;
-            }
-            else if (desiredOutcome == LOSE) {
+            } else if (desiredOutcome == LOSE) {
                 switch (opponentMove) {
                     case ROCK:
                         myMove = SCISSORS;
@@ -59,8 +58,7 @@ public class RoundScoring {
                         System.out.println("Error");
                 }
                 total += myMove;
-            }
-            else if (desiredOutcome == WIN) {
+            } else if (desiredOutcome == WIN) {
                 switch (opponentMove) {
                     case ROCK:
                         myMove = PAPER;

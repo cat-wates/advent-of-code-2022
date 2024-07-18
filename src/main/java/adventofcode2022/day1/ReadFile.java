@@ -13,18 +13,10 @@ public class ReadFile {
             String next = scanner.nextLine();
             if (next.isEmpty()) {
                 calories.add(0);
-            }
-            else {
+            } else {
                 calories.add(Integer.parseInt(next));
             }
         }
-//        while (scanner.hasNext()) {
-//            int elfTotal = 0;
-//            String next = scanner.next();
-//            elfTotal += Integer.parseInt(next);
-//            caloriesPerElf.add(elfTotal);
-//        }
-
         scanner.close();
         return calories;
     }

@@ -24,10 +24,6 @@ public class MaxCalories {
             max3Cals += max;
             calsPerElf.remove((Integer) max);
         }
-
-
         return max3Cals;
     }
-
-
 }

@@ -13,17 +13,14 @@ public class CalorieTotals {
             if (calories.get(i) == 0) {
                 caloriesPerElf.add(total);
                 total = 0;
-            }
-            else if (i == calories.size() - 1 ) {
+            } else if (i == calories.size() - 1) {
                 total += calories.get(i);
                 caloriesPerElf.add(total);
-            }
-            else {
+            } else {
                 total += calories.get(i);
             }
-
         }
 //issue - last value doesn't add to list
-return caloriesPerElf;
+        return caloriesPerElf;
     }
 }
