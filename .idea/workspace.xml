@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Clean-up of repo">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/ElfPair.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/ElfPair.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day4/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/adventofcode2022/day4/ElfPairTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day4/ElfPairTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" afterDir="false" />
+    </list>
+    <list id="5a21bc91-d5f0-4385-b231-819a7c04353d" name="Changes by bethanie.garfin" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +54,16 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java">
+      <ranges>
+        <range start1="3" end1="4" start2="3" end2="4" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
+        <range start1="6" end1="6" start2="6" end2="23" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
+        <range start1="9" end1="9" start2="26" end2="27" changelist="5a21bc91-d5f0-4385-b231-819a7c04353d" />
+        <range start1="10" end1="19" start2="28" end2="36" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
+      </ranges>
+    </file>
+  </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
@@ -115,6 +126,12 @@
     "Gradle.RoundScoringTest.shouldReturnScoreTotalForTwoAndTwo.executor": "Run",
     "Gradle.RucksackTest.shouldSplitRucksackInstanceIntoTwoCompartments.executor": "Run",
     "Gradle.advent-of-code-2022 [:Main.main()].executor": "Run",
+    "JUnit.All in advent-of-code-2022.test (1).executor": "Run",
+    "JUnit.All in advent-of-code-2022.test (2).executor": "Run",
+    "JUnit.All in advent-of-code-2022.test (3).executor": "Run",
+    "JUnit.All in advent-of-code-2022.test.executor": "Run",
+    "JUnit.ConvertCharsTest.shouldConvertCToThree.executor": "Debug",
+    "JUnit.ConvertCharsTest.shouldConvertZToThree.executor": "Run",
     "JUnit.ElfPairTest.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
@@ -141,90 +158,54 @@
       <recent name="$PROJECT_DIR$/src/main/resources/one" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.Main" />
-      <module name="advent-of-code-2022.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+  <component name="RunManager" selected="JUnit.All in advent-of-code-2022.test (4)">
+    <configuration name="All in advent-of-code-2022.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElfPairTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in advent-of-code-2022.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in advent-of-code-2022.test (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
-      <option name="METHOD_NAME" value="shouldCheckWhetherAnyDuplicateWillResultInTrue" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in advent-of-code-2022.test (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
-      <option name="METHOD_NAME" value="shouldCheckWhetherNoCompleteDuplicateResultsInFalse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in advent-of-code-2022.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day4" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day4.ElfPairTest" />
-      <option name="METHOD_NAME" value="shouldCheckWhetherNoDuplicatesWillResultInFalse" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue" />
-        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse" />
-        <item itemvalue="JUnit.ElfPairTest" />
-        <item itemvalue="JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test (4)" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test (1)" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test (3)" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -256,7 +237,17 @@
       <workItem from="1719920645444" duration="10266000" />
       <workItem from="1719932309838" duration="40532000" />
       <workItem from="1721048255707" duration="10457000" />
-      <workItem from="1721219067217" duration="9203000" />
+      <workItem from="1721219067217" duration="10545000" />
+      <workItem from="1721656213615" duration="15000" />
+      <workItem from="1721901561830" duration="11000" />
+      <workItem from="1721904762203" duration="7000" />
+      <workItem from="1721905677695" duration="5000" />
+      <workItem from="1722245418009" duration="20000" />
+      <workItem from="1722246738836" duration="16000" />
+      <workItem from="1722246847424" duration="30000" />
+      <workItem from="1722251518030" duration="1000" />
+      <workItem from="1726478785697" duration="4433000" />
+      <workItem from="1726739673903" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -410,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721297895035</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates">
+      <option name="closed" value="true" />
+      <created>1721310541542</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1721310541542</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +444,7 @@
     <MESSAGE value="Day 3 part 2 FINAL&#10;- Refactored BadgeFinder.java to use a simpler loop structure" />
     <MESSAGE value="Day 4 part 1&#10;- Working solution for part 1&#10;- Next &gt; try refactoring some of the logic outside of Main.java(?)" />
     <MESSAGE value="Clean-up of repo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Clean-up of repo" />
+    <MESSAGE value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
   </component>
 </project>
