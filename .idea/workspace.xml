@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day5/day5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day5/MainTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day6/PacketMarker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day6/PacketMarkerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" afterDir="false" />
     </list>
-    <list id="5a21bc91-d5f0-4385-b231-819a7c04353d" name="Changes by bethanie.garfin" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java" afterDir="false" />
-    </list>
+    <list id="5a21bc91-d5f0-4385-b231-819a7c04353d" name="Changes by bethanie.garfin" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,16 +55,6 @@
   <component name="KubernetesApiProvider">{
   &quot;isMigrated&quot;: true
 }</component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/adventofcode2022/day2/ConvertChars.java">
-      <ranges>
-        <range start1="3" end1="4" start2="3" end2="4" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
-        <range start1="6" end1="6" start2="6" end2="23" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
-        <range start1="9" end1="9" start2="26" end2="27" changelist="5a21bc91-d5f0-4385-b231-819a7c04353d" />
-        <range start1="10" end1="19" start2="28" end2="36" changelist="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" />
-      </ranges>
-    </file>
-  </component>
   <component name="OptimizeOnSaveOptions">
     <option name="myRunOnSave" value="true" />
   </component>
@@ -129,6 +120,7 @@
     "JUnit.All in advent-of-code-2022.test (1).executor": "Run",
     "JUnit.All in advent-of-code-2022.test (2).executor": "Run",
     "JUnit.All in advent-of-code-2022.test (3).executor": "Run",
+    "JUnit.All in advent-of-code-2022.test (4).executor": "Run",
     "JUnit.All in advent-of-code-2022.test.executor": "Run",
     "JUnit.ConvertCharsTest.shouldConvertCToThree.executor": "Debug",
     "JUnit.ConvertCharsTest.shouldConvertZToThree.executor": "Run",
@@ -136,6 +128,13 @@
     "JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse.executor": "Debug",
+    "JUnit.MainTest.executor": "Run",
+    "JUnit.MainTest.oneStackNoItems.executor": "Run",
+    "JUnit.MainTest.oneStackOneItem.executor": "Run",
+    "JUnit.MainTest.twoStacksOneItem.executor": "Debug",
+    "JUnit.PacketMarkerTest.executor": "Run",
+    "JUnit.PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent.executor": "Run",
+    "JUnit.PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -153,59 +152,100 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="adventofcode2022.day6" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources/one" />
       <recent name="$PROJECT_DIR$/src/main/resources/one" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="adventofcode2022.day5" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in advent-of-code-2022.test (4)">
-    <configuration name="All in advent-of-code-2022.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2022.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.Main" />
+      <module name="advent-of-code-2022.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in advent-of-code-2022.test (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day5" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day5.MainTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in advent-of-code-2022.test (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PacketMarkerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day6" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.PacketMarkerTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in advent-of-code-2022.test (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day6" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.PacketMarkerTest" />
+      <option name="METHOD_NAME" value="shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in advent-of-code-2022.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day6" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.PacketMarkerTest" />
+      <option name="METHOD_NAME" value="shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in advent-of-code-2022.test (4)" />
-        <item itemvalue="JUnit.All in advent-of-code-2022.test (1)" />
-        <item itemvalue="JUnit.All in advent-of-code-2022.test" />
-        <item itemvalue="JUnit.All in advent-of-code-2022.test (3)" />
-        <item itemvalue="JUnit.All in advent-of-code-2022.test (2)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent" />
+        <item itemvalue="JUnit.PacketMarkerTest" />
+        <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" />
+        <item itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +287,9 @@
       <workItem from="1722246847424" duration="30000" />
       <workItem from="1722251518030" duration="1000" />
       <workItem from="1726478785697" duration="4433000" />
-      <workItem from="1726739673903" duration="1565000" />
+      <workItem from="1726739673903" duration="2189000" />
+      <workItem from="1727093923657" duration="6848000" />
+      <workItem from="1729166857064" duration="5436000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -409,7 +451,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721310541542</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map">
+      <option name="closed" value="true" />
+      <created>1726741325220</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726741325220</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -445,6 +495,7 @@
     <MESSAGE value="Day 4 part 1&#10;- Working solution for part 1&#10;- Next &gt; try refactoring some of the logic outside of Main.java(?)" />
     <MESSAGE value="Clean-up of repo" />
     <MESSAGE value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
+    <MESSAGE value="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map" />
   </component>
 </project>
