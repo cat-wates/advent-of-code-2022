@@ -4,11 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 6 COMPLETE">
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/Directory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/FileSystemParser.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/day5/day5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day7/directory.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day5/MainTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day6/PacketMarker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day6/PacketMarkerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day7/FileSystemParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="5a21bc91-d5f0-4385-b231-819a7c04353d" name="Changes by bethanie.garfin" comment="" />
@@ -128,6 +130,7 @@
     "JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse.executor": "Debug",
+    "JUnit.FileSystemParserTest.shouldParseEmptyDirectory.executor": "Run",
     "JUnit.MainTest.executor": "Run",
     "JUnit.MainTest.oneStackNoItems.executor": "Run",
     "JUnit.MainTest.oneStackOneItem.executor": "Run",
@@ -153,6 +156,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="adventofcode2022.day7" />
       <recent name="adventofcode2022.day6" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -163,7 +167,7 @@
       <recent name="adventofcode2022.day5" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.FileSystemParserTest.shouldParseEmptyDirectory">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.Main" />
       <module name="advent-of-code-2022.main" />
@@ -177,17 +181,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FileSystemParserTest.shouldParseEmptyDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="adventofcode2022.day5.*" />
+          <option name="PATTERN" value="adventofcode2022.day7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day5" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day5.MainTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
+      <option name="METHOD_NAME" value="shouldParseEmptyDirectory" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -241,11 +246,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSystemParserTest.shouldParseEmptyDirectory" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent" />
         <item itemvalue="JUnit.PacketMarkerTest" />
         <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" />
-        <item itemvalue="JUnit.MainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -289,7 +294,8 @@
       <workItem from="1726478785697" duration="4433000" />
       <workItem from="1726739673903" duration="2189000" />
       <workItem from="1727093923657" duration="6848000" />
-      <workItem from="1729166857064" duration="5436000" />
+      <workItem from="1729166857064" duration="5711000" />
+      <workItem from="1729502031286" duration="6244000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -459,7 +465,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726741325220</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Day 6 COMPLETE">
+      <option name="closed" value="true" />
+      <created>1729177321385</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1729177321385</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,6 +510,7 @@
     <MESSAGE value="Clean-up of repo" />
     <MESSAGE value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
     <MESSAGE value="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map" />
+    <MESSAGE value="Day 6 COMPLETE" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 6 COMPLETE" />
   </component>
 </project>
