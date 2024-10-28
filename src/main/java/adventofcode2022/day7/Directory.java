@@ -13,6 +13,10 @@ public class Directory {
         this.fileSizes = fileSizes;
     }
 
+    public void addFileSize(String fileSize) {
+        fileSizes.add(fileSize);
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

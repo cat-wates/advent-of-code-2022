@@ -6,31 +6,31 @@ import java.util.List;
 public class FileSystemParser {
 
 
-    public Directory parse(String input) {
-        List<Directory> listOfDirectories = new ArrayList<>();
+    public List<Directory> parse(String input) {
+        List<Directory> directories = new ArrayList<>();
         Directory directory = null;
         String[] lines = input.split("\n"); //array of strings split by line
         for (String line : lines) { //for every line
             if (line.startsWith("$ cd ") && line.charAt(5) != '.') { //if the line starts with "$ cd " and isn't "$ cd .."
-                String dir = input.substring(5, input.indexOf("\n$ ls")); //substring from end of cd to before next line, i.e. name of directory
+                if (directory != null) {
+                    directories.add(directory);
+                }
+                String dir = line.substring(5); //substring from end of cd to before next line, i.e. name of directory
                 directory = new Directory(dir, new ArrayList<>());
             }
             if (Character.isDigit(line.charAt(0))) {
-                directory.fileSizes = createFileSizes(lines);
-
-
-                ///add finished directory to list?
+                String[] digits = line.split(" ");
+                directory.addFileSize(digits[0]);
             }
         }
-        return directory;
+        directories.add(directory);
+        return directories;
     }
 
-    private List<String> createFileSizes(String[] lines) {
-        List<String> fileSizes = new ArrayList<>();
-        //create list
-        //for every line that isn't "cd", extract numbers (use regex maybe?)
-        //add them to the list
-
-        return fileSizes;
-    }
+//    public Integer doSomething(Integer index, List<String> list) {
+//// create parent directory
+////        add file sizes
+////        for each directory call the same function
+////        return directory when complete
+//    }
 }
