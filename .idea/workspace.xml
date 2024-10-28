@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 6 COMPLETE">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 5 starter">
       <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/Directory.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/FileSystemParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day5/day5.txt" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/day7/directory.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day5/MainTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/test/java/adventofcode2022/day7/FileSystemParserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -130,7 +128,8 @@
     "JUnit.ElfPairTest.shouldCheckWhetherAnyDuplicateWillResultInTrue.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse.executor": "Debug",
-    "JUnit.FileSystemParserTest.shouldParseEmptyDirectory.executor": "Run",
+    "JUnit.FileSystemParserTest.shouldParseDirectoryContainingOneFile.executor": "Run",
+    "JUnit.FileSystemParserTest.shouldParseEmptyDirectory.executor": "Debug",
     "JUnit.MainTest.executor": "Run",
     "JUnit.MainTest.oneStackNoItems.executor": "Run",
     "JUnit.MainTest.oneStackOneItem.executor": "Run",
@@ -167,7 +166,7 @@
       <recent name="adventofcode2022.day5" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileSystemParserTest.shouldParseEmptyDirectory">
+  <component name="RunManager" selected="JUnit.FileSystemParserTest.shouldParseDirectoryContainingOneFile">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.Main" />
       <module name="advent-of-code-2022.main" />
@@ -177,6 +176,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemParserTest.shouldParseDirectoryContainingOneFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="adventofcode2022.day7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
+      <option name="METHOD_NAME" value="shouldParseDirectoryContainingOneFile" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,29 +243,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day6.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day6" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day6.PacketMarkerTest" />
-      <option name="METHOD_NAME" value="shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileSystemParserTest.shouldParseDirectoryContainingOneFile" />
         <item itemvalue="JUnit.FileSystemParserTest.shouldParseEmptyDirectory" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent" />
         <item itemvalue="JUnit.PacketMarkerTest" />
-        <item itemvalue="JUnit.PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent" />
       </list>
     </recent_temporary>
   </component>
@@ -295,7 +294,8 @@
       <workItem from="1726739673903" duration="2189000" />
       <workItem from="1727093923657" duration="6848000" />
       <workItem from="1729166857064" duration="5711000" />
-      <workItem from="1729502031286" duration="6244000" />
+      <workItem from="1729502031286" duration="8222000" />
+      <workItem from="1729852599583" duration="11320000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -473,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729177321385</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Day 5 starter">
+      <option name="closed" value="true" />
+      <created>1729604839795</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1729604839795</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,6 +519,7 @@
     <MESSAGE value="Day 4 part 2&#10;- Added a method into ElfPair.java to find the cases where there are any duplicates" />
     <MESSAGE value="Day 2 REFACTOR&#10;- Refactoring ConvertChars to use a map" />
     <MESSAGE value="Day 6 COMPLETE" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 6 COMPLETE" />
+    <MESSAGE value="Day 5 starter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 5 starter" />
   </component>
 </project>
