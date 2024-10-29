@@ -16,11 +16,15 @@ public class FileSystemParser {
                     directories.add(directory);
                 }
                 String dir = line.substring(5); //substring from end of cd to before next line, i.e. name of directory
-                directory = new Directory(dir, new ArrayList<>());
+                directory = new Directory(dir, new ArrayList<>(), new ArrayList<>());
             }
             if (Character.isDigit(line.charAt(0))) {
                 String[] digits = line.split(" ");
                 directory.addFileSize(digits[0]);
+            }
+            if (line.startsWith("dir ")) {
+                String[] childDirectories = line.split(" ");
+                directory.addChildDirectory(new Directory(childDirectories[1], new ArrayList<>(), new ArrayList<>()));
             }
         }
         directories.add(directory);

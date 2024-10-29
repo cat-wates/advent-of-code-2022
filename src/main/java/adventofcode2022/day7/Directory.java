@@ -7,14 +7,20 @@ public class Directory {
 
     String name;
     List<String> fileSizes;
+    List<Directory> childDirectories;
 
-    public Directory(String name, List<String> fileSizes) {
+    public Directory(String name, List<String> fileSizes, List<Directory> childDirectories) {
         this.name = name;
         this.fileSizes = fileSizes;
+        this.childDirectories = childDirectories;
     }
 
     public void addFileSize(String fileSize) {
         fileSizes.add(fileSize);
+    }
+
+    public void addChildDirectory(Directory childDirectory) {
+        childDirectories.add(childDirectory);
     }
 
     @Override

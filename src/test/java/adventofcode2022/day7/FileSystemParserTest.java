@@ -16,7 +16,7 @@ public class FileSystemParserTest {
 //        When
         FileSystemParser fsp = new FileSystemParser();
         List<Directory> actual = fsp.parse(input);
-        Directory expected = new Directory("abc", new ArrayList<>());
+        Directory expected = new Directory("abc", new ArrayList<>(), new ArrayList<>());
 //        Then
         assertThat(actual.get(0)).isEqualTo(expected);
     }
@@ -28,7 +28,7 @@ public class FileSystemParserTest {
 //        When
         FileSystemParser fsp = new FileSystemParser();
         List<Directory> actual = fsp.parse(input);
-        Directory expected = new Directory("abc", List.of("123"));
+        Directory expected = new Directory("abc", List.of("123"), new ArrayList<>());
 //        Then
         assertThat(actual.get(0)).isEqualTo(expected);
         assertThat(actual.get(0).fileSizes).isEqualTo(expected.fileSizes);
@@ -41,7 +41,7 @@ public class FileSystemParserTest {
 //        When
         FileSystemParser fsp = new FileSystemParser();
         List<Directory> actual = fsp.parse(input);
-        Directory expected = new Directory("abc", List.of("123", "456"));
+        Directory expected = new Directory("abc", List.of("123", "456"), new ArrayList<>());
 //        Then
         assertThat(actual.get(0)).isEqualTo(expected);
         assertThat(actual.get(0).fileSizes).isEqualTo(expected.fileSizes);
@@ -54,12 +54,63 @@ public class FileSystemParserTest {
 //        When
         FileSystemParser fsp = new FileSystemParser();
         List<Directory> actual = fsp.parse(input);
-        Directory expectedDir1 = new Directory("abc", List.of("123"));
-        Directory expectedDir2 = new Directory("ghi", List.of("456"));
+        Directory expectedDir1 = new Directory("abc", List.of("123"), new ArrayList<>());
+        Directory expectedDir2 = new Directory("ghi", List.of("456"), new ArrayList<>());
 //        Then
         assertThat(actual.get(0)).isEqualTo(expectedDir1);
         assertThat(actual.get(1)).isEqualTo(expectedDir2);
         assertThat(actual.size()).isEqualTo(2);
+    }
+
+    @Test
+    public void shouldParseADirectoryWhichContainsAChildDirectory() {
+        //        Given
+        String input = "$ cd abc\n$ ls\ndir def";
+//        When
+        FileSystemParser fsp = new FileSystemParser();
+        List<Directory> actual = fsp.parse(input);
+        Directory expectedDir1 = new Directory("abc", new ArrayList<>(), List.of(new Directory("def", new ArrayList<>(), new ArrayList<>())));
+//        Then
+        assertThat(actual.get(0)).isEqualTo(expectedDir1);
+        assertThat(actual.size()).isEqualTo(1); //it doesn't store child directory until it is called upon by "$ cd " rule...is this right?
+    }
+
+    @Test
+    public void shouldParseADirectoryWhichContainsAChildDirectoryAndFileSizes() {
+        //        Given
+        String input = "$ cd abc\n$ ls\ndir def\n$ cd def\n$ ls\n123 ";
+//        When
+        FileSystemParser fsp = new FileSystemParser();
+        List<Directory> actual = fsp.parse(input);
+        Directory expectedDir1 = new Directory("abc", new ArrayList<>(), List.of(new Directory("def", List.of("123"), new ArrayList<>())));
+        Directory expectedDir2 = new Directory("def", List.of("123"), new ArrayList<>());
+//        Then
+        assertThat(actual.get(0)).isEqualTo(expectedDir1);
+        assertThat(expectedDir1.childDirectories.get(0)).isEqualTo(expectedDir2);
+        assertThat(actual.get(1)).isEqualTo(expectedDir2);
+        assertThat(actual.size()).isEqualTo(2);
+    }
+
+    @Test
+    public void shouldParseThreeNestedDirectoriesWhichContainFiles() {
+        //        Given
+        String input = "$ cd abc\n$ ls\ndir def\n123 abc\n$ cd def\n$ ls\n456 def\ndir ghi";
+//        When
+        FileSystemParser fsp = new FileSystemParser();
+        List<Directory> actual = fsp.parse(input);
+        Directory expectedDir1 = new Directory("abc", new ArrayList<>(), List.of(new Directory("def",
+                List.of("123"), List.of(new Directory("ghi", new ArrayList<>(), new ArrayList<>())))));
+        Directory expectedDir2 = new Directory("def", List.of("123"), List.of(new Directory("ghi",
+                new ArrayList<>(), new ArrayList<>())));
+        Directory nestedExpectedDir3 = new Directory("ghi", new ArrayList<>(), new ArrayList<>());
+//        Then
+        assertThat(actual.get(0)).isEqualTo(expectedDir1);
+        assertThat(expectedDir1.childDirectories.get(0)).isEqualTo(expectedDir2);
+        assertThat(actual.get(1)).isEqualTo(expectedDir2);
+        assertThat(expectedDir2.childDirectories.get(0)).isEqualTo(nestedExpectedDir3);
+        assertThat(actual.size()).isEqualTo(2);
+    }
+
     }
 
 
@@ -68,4 +119,4 @@ public class FileSystemParserTest {
 //    public void shouldIgnoreUnnecessaryCommandLines() {
 //
 //    }
-}
+//}

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 7 starter">
+    <list default="true" id="ff4a8aae-5fe8-4237-b5c2-1d0a1654976b" name="Changes" comment="Day 7 work in progress">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/Directory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/Directory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/FileSystemParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventofcode2022/day7/FileSystemParser.java" afterDir="false" />
@@ -67,7 +67,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Run",
+    "Application.Main.executor": "Debug",
     "Application.adventofcode2022.day3.Main.executor": "Run",
     "Gradle.BadgeFinderTest.shouldFindCommonCharInThreeStrings.executor": "Run",
     "Gradle.BadgeFinderTest.shouldFindTwoCommonCharsInSixStrings.executor": "Run",
@@ -127,9 +127,13 @@
     "JUnit.ElfPairTest.shouldCheckWhetherNoCompleteDuplicateResultsInFalse.executor": "Run",
     "JUnit.ElfPairTest.shouldCheckWhetherNoDuplicatesWillResultInFalse.executor": "Debug",
     "JUnit.FileSystemParserTest.executor": "Run",
+    "JUnit.FileSystemParserTest.shouldParseADirectoryWhichContainsAChildDirectory.executor": "Debug",
+    "JUnit.FileSystemParserTest.shouldParseADirectoryWhichContainsAChildDirectoryAndFileSizes.executor": "Run",
+    "JUnit.FileSystemParserTest.shouldParseADirectoryWhichContainsAnotherDirectory.executor": "Debug",
     "JUnit.FileSystemParserTest.shouldParseDirectoryContainingOneFile.executor": "Run",
     "JUnit.FileSystemParserTest.shouldParseDirectoryContainingTwoFiles.executor": "Run",
     "JUnit.FileSystemParserTest.shouldParseEmptyDirectory.executor": "Debug",
+    "JUnit.FileSystemParserTest.shouldParseThreeNestedDirectoriesWhichContainFiles.executor": "Run",
     "JUnit.FileSystemParserTest.shouldParseTwoDirectoriesWithFiles.executor": "Run",
     "JUnit.MainTest.executor": "Run",
     "JUnit.MainTest.oneStackNoItems.executor": "Run",
@@ -138,6 +142,7 @@
     "JUnit.PacketMarkerTest.executor": "Run",
     "JUnit.PacketMarkerTest.shouldFindMarkerPositionWhenMultipleDuplicateCharsPresent.executor": "Run",
     "JUnit.PacketMarkerTest.shouldFindMarkerVPositionWhenNoDuplicateCharsPresent.executor": "Run",
+    "JUnit.adventofcode2022.day7 in advent-of-code-2022.test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
@@ -167,23 +172,37 @@
       <recent name="adventofcode2022.day5" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FileSystemParserTest">
-    <configuration name="FileSystemParserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2022.test" />
+  <component name="RunManager" selected="JUnit.FileSystemParserTest.shouldParseThreeNestedDirectoriesWhichContainFiles">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.Main" />
+      <module name="advent-of-code-2022.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="adventofcode2022.day7.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSystemParserTest.shouldParseDirectoryContainingOneFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="All in advent-of-code-2022.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="All in advent-of-code-2022.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="advent-of-code-2022.test" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSystemParserTest.shouldParseThreeNestedDirectoriesWhichContainFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
       <extension name="coverage">
         <pattern>
@@ -193,13 +212,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
       <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
-      <option name="METHOD_NAME" value="shouldParseDirectoryContainingOneFile" />
+      <option name="METHOD_NAME" value="shouldParseThreeNestedDirectoriesWhichContainFiles" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSystemParserTest.shouldParseDirectoryContainingTwoFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="adventofcode2022.day7 in advent-of-code-2022.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="advent-of-code-2022.test" />
       <extension name="coverage">
         <pattern>
@@ -208,52 +227,18 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
-      <option name="METHOD_NAME" value="shouldParseDirectoryContainingTwoFiles" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileSystemParserTest.shouldParseEmptyDirectory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
-      <option name="METHOD_NAME" value="shouldParseEmptyDirectory" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileSystemParserTest.shouldParseTwoDirectoriesWithFiles" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="advent-of-code-2022.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="adventofcode2022.day7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="adventofcode2022.day7" />
-      <option name="MAIN_CLASS_NAME" value="adventofcode2022.day7.FileSystemParserTest" />
-      <option name="METHOD_NAME" value="shouldParseTwoDirectoriesWithFiles" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.FileSystemParserTest" />
-        <item itemvalue="JUnit.FileSystemParserTest.shouldParseTwoDirectoriesWithFiles" />
-        <item itemvalue="JUnit.FileSystemParserTest.shouldParseEmptyDirectory" />
-        <item itemvalue="JUnit.FileSystemParserTest.shouldParseDirectoryContainingTwoFiles" />
-        <item itemvalue="JUnit.FileSystemParserTest.shouldParseDirectoryContainingOneFile" />
+        <item itemvalue="JUnit.FileSystemParserTest.shouldParseThreeNestedDirectoriesWhichContainFiles" />
+        <item itemvalue="JUnit.adventofcode2022.day7 in advent-of-code-2022.test" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test (1)" />
+        <item itemvalue="JUnit.All in advent-of-code-2022.test" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +284,7 @@
       <workItem from="1727093923657" duration="6848000" />
       <workItem from="1729166857064" duration="5711000" />
       <workItem from="1729502031286" duration="8222000" />
-      <workItem from="1729852599583" duration="18315000" />
+      <workItem from="1729852599583" duration="27343000" />
     </task>
     <task id="LOCAL-00001" summary="AoC day 1 pt 1">
       <option name="closed" value="true" />
@@ -493,7 +478,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730115955350</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Day 7 work in progress">
+      <option name="closed" value="true" />
+      <created>1730135334064</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1730135334064</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,6 +526,7 @@
     <MESSAGE value="Day 6 COMPLETE" />
     <MESSAGE value="Day 5 starter" />
     <MESSAGE value="Day 7 starter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Day 7 starter" />
+    <MESSAGE value="Day 7 work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="Day 7 work in progress" />
   </component>
 </project>
